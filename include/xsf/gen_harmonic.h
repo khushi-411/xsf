@@ -1,7 +1,5 @@
 #pragma once
 
-#include <cinttypes>
-
 #include "config.h"
 #include "error.h"
 #include "zeta.h"
@@ -145,7 +143,7 @@ inline double gen_harmonic(T n, double a) {
         // If here, we know a is finite and a > 1, and n > 1.
         //
         // For a > 1, we can use the formula zeta(a, 1) - zeta(a, n + 1),
-        // where zeta(a, k) is the Hurwitiz zeta function.
+        // where zeta(a, k) is the Hurwitz zeta function.
         // But if zeta(a, 1) and zeta(a, n + 1) are close, precision is lost
         // in the subtraction, so we use the explicit sum instead. We consider
         // the values "close" if zeta(a, n + 1)/zeta(a, 1) > zeta_ratio_threshold.
